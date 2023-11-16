@@ -190,7 +190,7 @@ namespace homework9
                     w++;
                 }
             }
-            Console.WriteLine($"Вы верно перевели {w} слов ! Молодчина ! Погладим на ваших соперников .");    
+            Console.WriteLine($"Вы верно перевели {w} слов ! Молодчина ! Поглядим на ваших соперников .");    
             Random n = new Random();
             int k = n.Next(0, 5);
             Console.WriteLine($"Ваши соперники перевели {k} слов !");
