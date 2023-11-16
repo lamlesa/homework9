@@ -29,17 +29,25 @@ namespace lab10
 
                 Console.WriteLine("( точка )");
                 point.MoveHorizontally();
+                point.MoveVertically();
+                point.CheckVisibility();
                 point.ChangeColor();
                 point.CalculateTheArea();
                 point.PrintFields();
 
                 Console.WriteLine("( круг )");
+                circle.MoveHorizontally();
                 circle.MoveVertically();
+                circle.CheckVisibility();
+                circle.ChangeColor();
                 circle.CalculateTheArea();
                 circle.PrintFields();
 
                 Console.WriteLine("( прямоугольник )");
+                rectangle.MoveHorizontally();
+                rectangle.MoveVertically();
                 rectangle.CheckVisibility();
+                rectangle.ChangeColor();
                 rectangle.CalculateTheArea();
                 rectangle.PrintFields();
             }

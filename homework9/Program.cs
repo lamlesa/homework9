@@ -16,10 +16,11 @@ namespace homework9
             Teams team_4 = new Teams("Kazakhstan", members_4);
 
             Console.WriteLine("Давайте начинать наше шоу !");
-
-            Console.WriteLine("Команды участвуют в играх следующем порядке: 1) Россия\n2) Франция\n3) Китай\n4) Казахстан\n5) Россия\n6) Франция\n7) Казахстан");
-            Console.WriteLine("Вам предстоит выбирать соперников для каждой из команд в каждом раунде !");
+            Console.WriteLine("( после каждого ввода стоит нажимать Enter . )");
+            Console.WriteLine("Команды участвуют в играх в следующем порядке: \n1) Россия\n2) Франция\n3) Китай\n4) Казахстан\n5) Россия\n6) Франция\n7) Казахстан");
+            Console.WriteLine("Вам предстоит выбирать соперников для каждой из команд в каждом раунде ! Приготовьтесь !");
             Console.WriteLine("На время игры вы помогаете участникам команды, которую выбрали !");
+
             Console.WriteLine("Выберите соперников для 1-ой команды:\n2 - Франция\n3 - Китай\n4 - Казахстан");
             ConsoleKey key = Console.ReadKey().Key;
             if (key == ConsoleKey.D2)
@@ -58,26 +59,9 @@ namespace homework9
                 throw new ArgumentException("\nВы нажали не ту кнопку, вы дисквалифицированы .");
             }
 
-            Console.WriteLine("Выберите соперников для 3-ей команды:\n1 - Россия\n2 - Франция\n4 - Казахстан");
-            key = Console.ReadKey().Key;
-            if (key == ConsoleKey.D1)
-            {
-                team_3.PlayMousetrap(team_1);
-            }
-            else if (key == ConsoleKey.D2)
-            {
-                team_3.PlayMousetrap(team_2);
-            }
-            else if (key == ConsoleKey.D4)
-            {
-                team_3.PlayMousetrap(team_4);
-            }
-            else
-            {
-                throw new ArgumentException("\nВы нажали не ту кнопку, вы дисквалифицированы .");
-            }
+            team_3.PlayMousetrap();
 
-            Console.WriteLine("Выберите соперников для 4-ой команды:\n1 - Россия\n3 - Франция\n3 - Китай");
+            Console.WriteLine("\nВыберите соперников для 4-ой команды:\n1 - Россия\n2 - Франция\n3 - Китай");
             key = Console.ReadKey().Key;
             if (key == ConsoleKey.D1)
             {
@@ -117,38 +101,21 @@ namespace homework9
                 throw new ArgumentException("\nВы нажали не ту кнопку, вы дисквалифицированы .");
             }
 
-            Console.WriteLine("Выберите соперников для 2-ой команды:\n1 - Россия\n3 - Китай\n4 - Казахстан");
-            key = Console.ReadKey().Key;
-            if (key == ConsoleKey.D1)
-            {
-                team_2.PlaySlide(team_1);
-            }
-            else if (key == ConsoleKey.D3)
-            {
-                team_2.PlaySlide(team_3);
-            }
-            else if (key == ConsoleKey.D4)
-            {
-                team_2.PlaySlide(team_4);
-            }
-            else
-            {
-                throw new ArgumentException("\nВы нажали не ту кнопку, вы дисквалифицированы .");
-            }
+            team_2.PlaySlide();
 
-            Console.WriteLine("Выберите соперников для 4-ой команды:\n1 - Россия\n3 - Франция\n3 - Китай");
+            Console.WriteLine("Выберите соперников для 4-ой команды:\n1 - Россия\n2 - Франция\n3 - Китай");
             key = Console.ReadKey().Key;
             if (key == ConsoleKey.D1)
             {
-                team_4.PlayUnderstood(team_1);
+                team_4.PlayLostInTranslation(team_1);
             }
             else if (key == ConsoleKey.D2)
             {
-                team_4.PlayUnderstood(team_2);
+                team_4.PlayLostInTranslation(team_2);
             }
             else if (key == ConsoleKey.D3)
             {
-                team_4.PlayUnderstood(team_3);
+                team_4.PlayLostInTranslation(team_3);
             }
             else
             {

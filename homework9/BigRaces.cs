@@ -7,9 +7,9 @@ namespace homework9
     {
         public abstract void PlayBeach(Teams team);
         public abstract void PlayFishing(Teams team);
-        public void PlayMousetrap(Teams team)
+        public void PlayMousetrap()
         {
-            Console.WriteLine("ИГРА 3: <<Мышеловка>>");
+            Console.WriteLine("\nИГРА 3: <<Мышеловка>>");
             Console.BackgroundColor = ConsoleColor.Red;
             Thread.Sleep(5000);
             Console.WriteLine("Попались !");
@@ -17,26 +17,23 @@ namespace homework9
         }
         public abstract void PlayPostmen(Teams team);
         public abstract void PlaySea(Teams team);
-        public void PlaySlide(Teams team)
+        public void PlaySlide()
         {
-            Console.WriteLine("ИГРА 6: <<Горка>>");
+            Console.WriteLine("\nИГРА 6: <<Горка>>");
+            string s = "ГОРКА"; 
             Console.BackgroundColor = ConsoleColor.Red;
-            Console.WriteLine("   Г   ");
+            Console.WriteLine($"{s[0]}");
             Console.BackgroundColor = ConsoleColor.Magenta;
-            Console.WriteLine("   О   ");
+            Console.WriteLine($"{s[1], 2}");
             Console.BackgroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("   Р   ");
+            Console.WriteLine($"{s[2], 4}");
             Console.BackgroundColor = ConsoleColor.DarkYellow;
-            Console.WriteLine("   К   ");
+            Console.WriteLine($"{s[3], 6}");
             Console.BackgroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("   А   ");
+            Console.WriteLine($"{s[4], 8}");
             Console.ResetColor();
             Console.WriteLine("В этой игре побеждает дружба !!");
         }
-        public void PlayUnderstood(Teams team)
-        {
-            Console.WriteLine("ИГРА 7: <<Понял>>");
-            Console.WriteLine("Раз поняли, то молодцы !");
-        }
+        public abstract void PlayLostInTranslation(Teams team);
     }
 }
