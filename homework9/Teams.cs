@@ -134,7 +134,7 @@ namespace homework9
             Console.WriteLine("\nИГРА 5: <<Море>>");
             Console.WriteLine("Суть игры: любимая всеми игра <<Море волнуется раз>> Вам всего лишь нужно замереть в позе фигуры, обитающей в море !");
             bool win_y = false, win_t = false;
-            Console.WriteLine("1... 2... 3... Вы замераете в форме ...\n1 - угря\n2 - русалки\n3 - осьминога");
+            Console.WriteLine("1... 2... 3... Вы замираете в форме ...\n1 - угря\n2 - русалки\n3 - осьминога");
             ConsoleKey key = Console.ReadKey().Key;
             if (key == ConsoleKey.D1)
             {
